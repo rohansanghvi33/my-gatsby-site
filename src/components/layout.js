@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import {container,heading,navLinks,navLinkItem,navLinkText} from './layout.module.css'
+import { StaticImage } from 'gatsby-plugin-image'
 
 const Layout = (props) => {
     const pageTitle=props.pageTitle
@@ -19,6 +20,13 @@ const Layout = (props) => {
                     {pageTitle}
                 </h1>
                 {children}
+                <StaticImage 
+                    src="../images/icon.png" 
+                    alt="dinosaur"
+                    placeholder="blurred"
+                    layout="fixed"
+                    width={200}
+                    height={200}/>
             </main>
         </div>
     )
